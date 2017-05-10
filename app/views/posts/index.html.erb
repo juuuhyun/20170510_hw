@@ -1,0 +1,20 @@
+<h1>아무말 대잔치 !</h1>
+<%=image_tag@pic%>
+<br>
+<a href="/posts/new">아무말 해보기</a>
+
+<br>
+<br>
+
+<h3>아무말들</h3>
+<br>
+<% @posts.each do |p|%>
+    <a href="/posts/show/<%=p.id%>"><%=p.title%></a>
+<br>
+    <%= p.content%>
+<br>
+    <form action="/posts/destroy/<%=p.id%>" method="POST">
+        <input type="submit" value="삭제">
+ </form>
+<hr>
+<% end %>
