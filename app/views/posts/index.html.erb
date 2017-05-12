@@ -14,7 +14,8 @@
     <%= p.content%>
 <br>
     <form action="/posts/destroy/<%=p.id%>" method="POST">
-        <input type="submit" value="삭제">
- </form>
+        <button type="submit">삭제!</button>
+        <button type="submit" formaction="/posts/edit/<%=p.id%>" formmethod="post">수정!</button>
+  </form>
 <hr>
 <% end %>
