@@ -4,6 +4,8 @@
 <h3><%=@post.title%></h3>
 <hr>
 <%=@post.content%>
+<br><br><br>
+<img src="<%= @post.image.url %>"
 
 <hr>
 <h5>아무말엔 아무말로 대답해주기!</h5>
@@ -19,7 +21,20 @@
 
 <h4>아무말의 아무말</h4>
 <% @comments.each do |c| %>
-    <p>- <%= c.content %></p>
+    <p>- <%= c.content %>
+    
+    <form action="/comments/edit/<%=c.id%>" formmethod="POST">
+        <button type="submit">수정</button>
+        
+    </form>
+
+
+     <form action="/comments/destroy/<%=c.id%>" method="POST">
+        <button type="submit">삭제</button>
+    </form>
+    
+   
+    </p>
 
 <% end %>
 

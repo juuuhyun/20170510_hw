@@ -1,24 +1,30 @@
+1. 인덱스(/posts/index)
+    (1)로그인과 회원가입을 할 수 있습니다 : 로그인되어있지 않을 때
+        >로그인을 누르면 로그인 페이지(/sessions/new)로 >로그인을 하면 메인페이지(/posts/index)로
+        >회원가입을 누르면 회원가입 페이지(/users/new)로 > 회원가입 내용을 제출하면 로그인 페이지(/sessions/new)로 > 로그인을 하면 메인페이지(/posts/index)로
+    (2) 반갑습니다! 라는 문구와 함께 글쓰기와 로그아웃이 가능합니다.
+        >아무말 해보기를 누르면 게시판 작성 페이지(/posts/new)로 > 작성을 누르면 메인페이지(/posts/index)로
+        >로그아웃을 누르면 세션종료    
+    (3) 글 목록을 확인하고 게시글을 수정 및 삭제할 수 있습니다
+        >수정을 누르면 게시글 수정 페이지(/posts/edit)로 > 수정완료를 누르면 메인페이지로(/posts/index)
+        >삭제를 누르면 게시글 삭제
+    (4) 글 제목을 누르면 게시글 상세보기가 가능합니다
+        >글 제목을 누르면 해당 게시글 상세 페이지(/posts/show/:post_id)로
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+2. 뉴(/posts/new)
+    (1)처음화면으로 돌아갈 수 있습니다
+        >처음화면으로를 누르면 메인페이지(/posts/index)로
+    (2)제목, 내용, 사진을 입력할 수 있습니다
+        >말하기를 누르면 메인페이지(/posts/index)로
 
+3. 쇼(/posts/show)
+    (1)게시글의 내용을 볼 수 있습니다
+    (2)댓글을 달 수 있습니다
+        >댓글을 작성하고 작성을 누르면 바로 그 내용이 게시글에 달리는 것을 확인
+    (3)댓글을 수정 또는 삭제할 수 있습니다
+        >수정을 누르면 댓글 수정 페이지(/comments/edit)로 > 
+        >삭제를 누르면 해당 댓글 삭제 > 바로 메인페이지(/posts/index)로 이동
 
-Welcome to your Rails project on Cloud9 IDE!
+4. 에딧(/posts/edit)
+    1.참고
 
-To get started, just do the following:
-
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://asdfghjklzxcvbn-juuuhyun.c9users.io/).
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide

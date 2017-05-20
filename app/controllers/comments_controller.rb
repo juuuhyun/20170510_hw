@@ -7,11 +7,25 @@ class CommentsController < ApplicationController
         
         redirect_to :back
     end
+    
+    def edit
+    @comment = Comment.find(params[:comment_id])
+    end
+  
+    def update
+    comment = Comment.find(params[:comment_id])
+    comment.content = params[:comment_content]
+    comment.save
+    
+    redirect_to '/'
+    end
     def destroy
         comment = Comment.find(params[:post_id])
         comment.destroy!
     
-    redirect_to '/'
-  end
+    redirect_to :back
+    end
+
+
 
 end

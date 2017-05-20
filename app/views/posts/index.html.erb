@@ -1,10 +1,25 @@
+<div class="main">
+    <div class="party">
 <h1>아무말 대잔치 !</h1>
+    </div>
 <%=image_tag@pic%>
 <br>
-<a href="/posts/new">아무말 해보기</a>
+    <div class="hello">
+<% unless session[:user_id].nil? %>
+    <h4>반갑습니다, <%= @user_email %>님! </h4>
+    <a href="/sessions/destroy">로그아웃</a> <br>
+    <br><br><br>
+    <a href="/posts/new">아무말 해보기</a>
 
-<br>
-<br>
+<% else %>
+    <a href="/sessions/new">로그인</a> <br>
+    <a href="/users/new">회원가입</a> <br>
+<% end %>
+    </div>
+
+</div>
+
+
 
 <h3>아무말들</h3>
 <br>
@@ -13,9 +28,11 @@
 <br>
     <%= p.content%>
 <br>
-    <form action="/posts/destroy/<%=p.id%>" method="POST">
-        <button type="submit">삭제!</button>
-        <button type="submit" formaction="/posts/edit/<%=p.id%>" formmethod="post">수정!</button>
+    <form action="/posts/edit/<%=p.id%>" method="POST">
+        <button type="submit">수정!</button>
+        <button type="submit" formaction="/posts/destroy/<%=p.id%>" formmethod="post">삭제!</button>
   </form>
 <hr>
 <% end %>
+
+</div>

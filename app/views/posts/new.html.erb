@@ -1,9 +1,11 @@
 <h2>아무말 해보기</h2>
 <a href="/posts/index">처음화면으로</a>
-<form action="/posts/create" method="POST">
+<form action="/posts/create" method="POST" enctype="multipart/form-data">
     <input type="text" name="post_title" placeholder="제목">
     <br>
     <input type="text" name="post_content" placeholder="내용">
+    <br>
+    <input type="file" name="pic">
     <br>
     <input type="submit" value="말하기!">
 </form>

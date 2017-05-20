@@ -10,7 +10,22 @@ Rails.application.routes.draw do
   post 'posts/edit/:post_id' => 'posts#edit'
   post 'posts/update/:post_id' => 'posts#update'
 
-
+  get 'comments/new'
+  post 'comments/destroy/:post_id' => 'comments#destroy'
+  
+  
+  get 'users/new'
+  post 'users/create'
+  
+  
+  get 'sessions/new'
+  post 'sessions/create'
+  get 'sessions/destroy'
+  
+  
+  get 'comments/edit/:comment_id' => 'comments#edit'
+  post 'comments/update/:comment_id' => 'comments#update'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
